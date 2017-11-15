@@ -1,6 +1,6 @@
 {
-  "name": "showdialog",
-  "version": "1.0.0",
+  "name": "cordova-showdialog-plugin",
+  "version": "1.1.2",
   "description": "弹窗显示",
   "main": "index.js",
   "scripts": {

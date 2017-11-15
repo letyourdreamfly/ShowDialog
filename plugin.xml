@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.example.plugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="com.example.plugin" version="1.1.2" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 <name>ShowDialog</name>
 <js-module name="ShowDialog" src="www/ShowDialog.js">
-<clobbers target="cordova.plugins.ShowDialog" />
+<clobbers target="showDialog" />
 </js-module>
 <platform name="android">
 <config-file parent="/*" target="res/xml/config.xml">
 <feature name="ShowDialog">
-<param name="android-package" value="com.example.plugin.ShowDialog" />
+<param name="android-package" value="com.example.plugin.ShowDialog" />s
 </feature>
 </config-file>
 <config-file parent="/*" target="AndroidManifest.xml">

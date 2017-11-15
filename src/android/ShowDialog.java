@@ -63,13 +63,15 @@ public class ShowDialog extends CordovaPlugin {
                 setSharedPreference(releaseApp, 2, false);
             }
             //Toast.makeText(this.cordova.getActivity(), "getSharedPreferenceString()>>>>"+getSharedPreferenceString(), Toast.LENGTH_LONG).show();
+            //获取SharedPreference存储的版本号
             String releaseAppVersion = getSharedPreferenceString();
             //调用该方法获取服务器上的版本号
             String releaseUpdate = getReleaseServe();
             // Toast.makeText(this.cordova.getActivity(), "update>>>" + releaseUpdate, Toast.LENGTH_LONG).show();
             //判断SharedPreference文件夹中数字
             //1的话，执行if()里面的语句，2的话执行else()中的语句
-            if (getSharedPreferenceInt() == 2) {
+            if(releaseUpdate!=""){
+                if (getSharedPreferenceInt() == 2) {
                 //Toast.makeText(this.cordova.getActivity(), "22222222", Toast.LENGTH_LONG).show();
                 if (!releaseAppVersion.equals(releaseUpdate)) {
                     if (getSharedPreferenceBoolean()) {
@@ -82,7 +84,7 @@ public class ShowDialog extends CordovaPlugin {
                     //Toast.makeText(this.cordova.getActivity(), "版本号一样,不做更新。", Toast.LENGTH_LONG).show();
                 }
             }
-
+            }
             callbackContext.success("success");
             return true;
         }
